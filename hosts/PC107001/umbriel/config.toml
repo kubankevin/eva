@@ -1,0 +1,18 @@
+# ==================================================
+#  PC107001
+#  Intel Xeon Silver 4216 + NVIDIA Quadro P2200
+#  Arch Linux + CachyOS Kernel | Noctalia v5
+#  Umbriel Configuration
+# ==================================================
+
+[include]
+files = [
+  "configs/appearance.toml",
+  "configs/env.toml",
+  "configs/keybinds.toml",
+  "configs/monitors.toml",
+  "configs/windowrules.toml",
+]
+
+[include.optional]
+files = ["noctalia.toml"]

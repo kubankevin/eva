@@ -1,0 +1,78 @@
+# ==================================================
+#  PC107001
+#  Intel Xeon Silver 4216 + NVIDIA Quadro P2200
+#  Arch Linux + CachyOS Kernel | Noctalia v5
+#  Umbriel Appearance, Layout and Animation
+# ==================================================
+
+[appearance]
+border_width = 2
+corner_radius = 10
+prefer_no_csd = true
+
+[appearance.blur]
+brightness = 0.9
+contrast = 0.9
+enabled = true
+noise = 0.02
+optimized = true
+passes = 3
+radius = 3
+saturation = 1.1
+
+[appearance.shadow]
+enabled = true
+offset_x = 2
+offset_y = 2
+softness = 10
+
+[layout]
+mode = "dwindle"
+
+[layout.dwindle]
+preserve_split = true
+
+# === Fixed Layer Rule ===
+[[layer_rule]]
+blur = true
+blur_ignore_alpha = 0.5
+blur_optimized = false
+match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+
+# === LCARS Optimized Animations ===
+[animation]
+curve = "easeout"
+duration_ms = 250
+enabled = true
+
+[animation.windows_in]
+curve = "spring:1,900"
+enabled = true
+scale = 0.5
+style = "popin"
+
+[animation.windows_move]
+curve = "spring:1,700"
+enabled = true
+
+[animation.windows_out]
+curve = "spring:1,900"
+enabled = true
+scale = 0.8
+style = "popin"
+
+[animation.overview]
+curve = "easeout"
+duration_ms = 250
+enabled = true
+workspace_curve = "spring:1,800"
+
+[animation.workspaces]
+curve = "spring:1,800"
+enabled = true
+
+[animation.border]
+enabled = false
+
+[animation.dim_unfocused]
+enabled = false

@@ -1,0 +1,27 @@
+# ==================================================
+#  PC107001
+#  Intel Xeon Silver 4216 + NVIDIA Quadro P2200
+#  Arch Linux + CachyOS Kernel | Noctalia v5
+#  Umbriel Monitor Configuration
+# ==================================================
+
+[output.DP-5]
+direct_scanout = false
+mode = "2560x1440@60"
+position = [0, 0]
+scale = 1.0
+workspaces = 10
+
+[output.DP-7]
+direct_scanout = false
+mode = "2560x1440@60"
+position = [2560, 0]
+scale = 1.0
+workspaces = 10
+
+[output.DP-2]
+direct_scanout = false
+mode = "2560x1440@60"
+position = [5120, 0]
+scale = 1.0
+workspaces = 10

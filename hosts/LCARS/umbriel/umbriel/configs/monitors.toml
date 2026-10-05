@@ -1,0 +1,14 @@
+# ==================================================
+#  LCARS
+#  AMD Ryzen 9 9950X3D + NVIDIA RTX 5090
+#  Arch Linux + CachyOS Kernel | Noctalia v5
+#  Umbriel Monitor Configuration
+# ==================================================
+
+[output.DP-1]
+direct_scanout = true
+mode = "5120x2160@165.06"
+position = [0, 0]
+scale = 1.0
+vrr = "fullscreen"
+workspaces = 10

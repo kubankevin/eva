@@ -1,0 +1,78 @@
+# ==================================================
+#  LCARS
+#  AMD Ryzen 9 9950X3D + NVIDIA RTX 5090
+#  Arch Linux + CachyOS Kernel | Noctalia v5
+#  Umbriel Appearance, Layout and Animation
+# ==================================================
+
+# === Appearance ===
+[appearance]
+border_width = 2
+corner_radius = 20
+prefer_no_csd = true
+
+# === Blur ===
+[appearance.blur]
+brightness = 0.9
+contrast = 0.9
+enabled = true
+noise = 0.02
+optimized = true
+passes = 3
+radius = 3
+saturation = 1.1
+
+# === Shadow ===
+[appearance.shadow]
+enabled = true
+offset_x = 2
+offset_y = 2
+softness = 10
+
+# === Layout ===
+[layout]
+mode = "dwindle"
+
+[layout.dwindle]
+preserve_split = true
+
+# === Global Animation ===
+[animation]
+curve = "easeout"
+duration_ms = 250
+enabled = true
+
+# === Window Animations ===
+[animation.windows_in]
+curve = "spring:1,900"
+enabled = true
+scale = 0.5
+style = "popin"
+
+[animation.windows_move]
+curve = "spring:1,700"
+enabled = true
+
+[animation.windows_out]
+curve = "spring:1,900"
+enabled = true
+scale = 0.8
+style = "popin"
+
+# === Workspace Animations ===
+[animation.overview]
+curve = "easeout"
+duration_ms = 250
+enabled = true
+workspace_curve = "spring:1,800"
+
+[animation.workspaces]
+curve = "spring:1,800"
+enabled = true
+
+# === Disabled Animations ===
+[animation.border]
+enabled = false
+
+[animation.dim_unfocused]
+enabled = false

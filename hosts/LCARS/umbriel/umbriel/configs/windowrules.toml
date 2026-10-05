@@ -1,0 +1,117 @@
+# ==================================================
+#  LCARS
+#  AMD Ryzen 9 9950X3D + NVIDIA RTX 5090
+#  Umbriel Window Rules
+# ==================================================
+
+# === Blur Catch-All ===
+[[window_rule]]
+blur = true
+
+# === Basic Dialogs ===
+[[window_rule]]
+match.title = "^(Authentication Required|Save As|Open Files)$"
+default_floating = true
+default_floating_size = { width = 0.7, height = 0.6 }
+default_position = { x = 0, y = 0 }
+
+# === FFXIV Boot ===
+[[window_rule]]
+match.title = "^FFXIV Boot Ver\\..*$"
+default_floating = true
+default_floating_size_px = { width = 640, height = 100 }
+default_fullscreen = false
+default_position = { x = 0, y = 0 }
+
+# === FFXIV Launcher ===
+[[window_rule]]
+match.title = "^FFXIV Launcher$"
+default_floating = true
+default_floating_size_px = { width = 160, height = 70 }
+default_fullscreen = false
+default_position = { x = 0, y = 0 }
+
+# === FFXIVLauncher (Third-Party) ===
+[[window_rule]]
+match.title = "^FFXIVLauncher$"
+default_floating = true
+default_floating_size_px = { width = 1280, height = 720 }
+default_fullscreen = false
+
+# === Games ===
+[[window_rule]]
+match.content_type = "game"
+blur = false
+default_fullscreen = true
+opacity = 1.0
+tearing = true
+vrr = "always"
+
+# === GNOME CSD Applications ===
+[[window_rule]]
+match.app_id = "^org\\.gnome\\..*$"
+shadow = false
+
+# === Noctalia Settings ===
+[[window_rule]]
+match.app_id = "^dev.noctalia.Noctalia$"
+default_floating = true
+default_floating_size_px = { width = 1020, height = 920 }
+
+# === Noctalia Share Picker ===
+[[window_rule]]
+match.app_id = "^dev.noctalia.UmbrielSharePicker$"
+default_floating = true
+default_floating_size = { width = 0.5, height = 0.6 }
+default_position = { x = 0, y = 0 }
+
+# === Picture-in-Picture ===
+[[window_rule]]
+match.title = "^(Picture-in-Picture|Picture in picture)$"
+default_floating = true
+default_maximize = false
+default_position = { x = 20, y = 20, anchor = "bottom_right" }
+opacity = 0.95
+
+# === Steam Chats & Secondary Windows ===
+[[window_rule]]
+match.app_id = "^[Ss]team$"
+match.title = "^(?!^([Ss]team|Friends List)$).+$"
+default_floating = true
+default_floating_size = { width = 0.2, height = 0.35 }
+
+# === Steam Friends List ===
+[[window_rule]]
+match.app_id = "^[Ss]team$"
+match.title = "^Friends List$"
+default_floating = true
+default_floating_size_px = { width = 420, height = 850 }
+default_position = { x = 10, y = 10, anchor = "bottom_right" }
+
+# === Steam Notification Toasts ===
+[[window_rule]]
+match.title = "^notificationtoasts_.+_desktop"
+default_focused = false
+default_pinned = true
+default_position = { x = 0, y = 0, anchor = "bottom_right" }
+
+# === Thunar Dialogs (File Operation) ===
+[[window_rule]]
+match.app_id = "^[Tt]hunar$"
+match.title = "^File Operation Progress$"
+default_floating = true
+default_position = { x = 0, y = 0 }
+
+# === Thunar Dialogs (Other) ===
+[[window_rule]]
+match.app_id = "^[Tt]hunar$"
+match.title = "^(?!.*[Tt]hunar).*$"
+default_floating = true
+default_position = { x = 0, y = 0 }
+
+# === Utility Apps ===
+[[window_rule]]
+match.app_id = "^(nvidia-settings|com\\.gabm\\.satty|Satty|timeshift-gtk|org\\.gnome\\.FileRoller|openrgb|lact|io\\.github\\.ilya_zlobintsev\\.LACT|net\\.davidotek\\.pupgui2)$"
+default_floating = true
+default_floating_size = { width = 0.6, height = 0.6 }
+default_position = { x = 0, y = 0 }
